@@ -1,3 +1,4 @@
+#coding=utf-8
 import requests
 import pymysql
 def getAccessToken():
@@ -8,24 +9,24 @@ def getAccessToken():
     #print(res['data']['accessToken'])
     print(accessToken)
 
-    # ´ò¿ªÊı¾İ¿âÁ¬½Ó
+    # æ‰“å¼€æ•°æ®åº“è¿æ¥
     db = pymysql.connect("localhost", "root", "admin", "accesstoken")
-    # Ê¹ÓÃcursor()·½·¨»ñÈ¡²Ù×÷ÓÎ±ê
+    # ä½¿ç”¨cursor()æ–¹æ³•è·å–æ“ä½œæ¸¸æ ‡
     cursor = db.cursor()
-    # SQL ¸üĞÂÓï¾ä
+    # SQL æ›´æ–°è¯­å¥
     sql="update accesstoken set accesstoken = '%s'" % (accessToken)
 
     try:
-        # Ö´ĞĞSQLÓï¾ä
+        # æ‰§è¡ŒSQLè¯­å¥
         cursor.execute(sql)
-        # Ìá½»µ½Êı¾İ¿âÖ´ĞĞ
+        # æäº¤åˆ°æ•°æ®åº“æ‰§è¡Œ
         db.commit()
     except:
-        # ·¢Éú´íÎóÊ±»Ø¹ö
+        # å‘ç”Ÿé”™è¯¯æ—¶å›æ»š
         print("Error")
         db.rollback()
 
-    # ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
+    # å…³é—­æ•°æ®åº“è¿æ¥
     db.close()
 
 if __name__ == '__main__':
