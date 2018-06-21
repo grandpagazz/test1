@@ -49,30 +49,6 @@ while user!=num and times<5:
         print("small")
     times=times+1
     
-'''
-a=1
-b=2
-c=3
-result=a+b>c and a+c>b and b+c>a
-while result==False:
-    print("please insert 1st number：")
-    a=input()
-    a=int(a)
-    print("please insert 2nd number：")
-    b=int(input())
-    print("please insert 3rd number：")
-    c=int(input())
-    result=a+b>c and a+c>b and b+c>a
-    if result==True:
-        if a==b and b==c and a==c:
-            print("Equilateral triangle")
-        elif a==b or b==c or a==c:
-            print("isosceles triangle")
-        else:
-            print("Common triangle")
-    else:
-        print("Can't make up a triangle")
 
-'''
 
         
