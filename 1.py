@@ -35,19 +35,7 @@ while times<9:
 print(num)
 
 
-num=60
-user=0
-times=0
-while user!=num and times<5:
-    print("please insert a number：")
-    user=int(input())
-    if user==num:
-        print("equal")
-    elif user>num:
-        print("big")
-    else:
-        print("small")
-    times=times+1
+
     
 
 
