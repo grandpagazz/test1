@@ -48,8 +48,8 @@ while user!=num and times<5:
     else:
         print("small")
     times=times+1
-
-
+    
+'''
 a=1
 b=2
 c=3
@@ -73,6 +73,6 @@ while result==False:
     else:
         print("Can't make up a triangle")
 
-
+'''
 
         
